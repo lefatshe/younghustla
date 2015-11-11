@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/overlay.css" media="all" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Library -->
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!-- secondary csss -->
+    <link rel="stylesheet" type="text/css" href="css/slider-pro.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="js/lib/fancybox/jquery.fancybox.css" media="screen" />
+
+    <!-- slide -->
+    <script type="text/javascript" src="js/lib/jquery.sliderPro.min.js"></script>
+    <script type="text/javascript" src="js/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function($) {
+            $('#comic-slide').sliderPro({
+                width: '35%',
+                //height: 700,
+                //aspectRatio: 1.5,
+                visibleSize: '100%',
+                //forceSize: 'fullWidth'
+            });
+
+            // instantiate fancybox when a link is clicked
+            $('#comic-slide .sp-image').parent('a').on('click', function(event) {
+                event.preventDefault();
+
+                // check if the clicked link is also used in swiping the slider
+                // by checking if the link has the 'sp-swiping' class attached.
+                // if the slider is not being swiped, open the lightbox programmatically,
+                // at the correct index
+                if ($('#comic-slide').hasClass('sp-swiping') === false) {
+                    $.fancybox.open($('#comic-slide .sp-image').parent('a'), {
+                        index: $(this).parents('.sp-slide').index()
+                    });
+                }
+            });
+        });
+    </script>
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js"></script>
+
+    <!-- SEO meta -->
+    <title>YoungHustler &amp; Comic - Book Limited</title>
+    <meta property="og:title" content="YoungHustler &amp; Comic - Book Limited" />
+    <meta property="og:description" content="What we hope to achieve through this comic is educate young people about entrepreneurship, the hardships, the sacrifices, the joy and moments of triumph enveloped in the life of an entrepreneur and also to inspire young people to follow their dreams...  Read more &raquo;" />
+
+    <!-- Define javascript, with modernizer -->
+    <script type="text/javascript" src="js/app2/modernizer-confiq.js"></script>
+
+    <!-- Type Kit function -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://use.typekit.net/fch6yno.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- loading -->
+    <script>
+        $(window).load(function() {
+            $("#loader").animate({
+            top: -500
+            }, 1500).delay().fadeOut();
+            //$("#container").show();
+        });
+    </script>   
+
+
+</head>
+
+
+
+
+<body class="home page page-id-6 page-template-default">
+    <div id="loader" class='col-md-7 col-md-offset-2'>
+    <p>
+        <img src="images/svg/logo.svg">
+    </p>
+</div>
+    <div id="container">
+        <header class="header" role="banner">
+
+            <div id="inner-header" class="wrap clearfix">
+                <ul class="pull-left social-ico">
+                    <li><a href="https://www.facebook.com/Young-Hustla-1062801180397387/"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="https://instagram.com/"><i class="fa fa-instagram fa-2x"></i></a></li>
+                </ul>
+                <!-- <a id="logo" href="#" rel="nofollow">
+                  <img alt="Appliance Tec Limited" src="images/comic-logo.png" />
+                </a> -->
+                <span class="nav-icon"></span>
+                <nav id="navigation" role="navigation">
+                    <ul id="menu-primary" class="nav top-nav clearfix">
+                        <li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="#about">Digital comic</a></li>
+                        <li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52"><a href="#comic-char">Comic characters</a></li>
+
+
+                        <li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="#contributions">Contributors</a></li>
+                        <li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46"><a href="#background">Comic Background</a></li>
+                        <li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="content-wrapper" class="wrap">
+            <section id="welcome" class="scroll-section clearfix">
+                <img class="welcome-logo" alt="young hustler" src="images/logo-banner.png" />
+                <h2><span>Digi comic available</span></h2>
+                <h4><span>Please Scroll Down</span></h4>
+                <span class="dash-bottom"></span>
+            </section>
+            <span class="pin-trigger"></span>
+            <div id="pin-outer" class="clearfix">
+                <div id="pin-inner" class="clearfix">
+                    <section id="about" class="scroll-section clearfix">
+                        <h1><span>Digital Comic</span></h1>
+                        <div class="content-box clearfix">
+                            <p>
+
+                                <!-- Comic Slide -->
+                                <div id="comic-slide" class="slider-pro">
+                                    <div class="sp-slides">
+                                        <div class="sp-slide">
+                                            <a href="images/comic-slide/1-large.jpg">
+                                                <img class="sp-image" src="css/images/blank.gif" data-src="images/comic-slide/1-medium.jpg" data-retina="images/comic-slide/1-large.jpg" />
+                                            </a>
+                                            <p class="sp-caption">Page 1: Short description goes here</p>
+                                        </div>
+
+                                        <div class="sp-slide">
+                                            <a href="images/comic-slide/2-large.jpg">
+                                                <img class="sp-image" src="css/images/blank.gif" data-src="images/comic-slide/2-medium.jpg" data-retina="images/comic-slide/2-large.jpg" />
+                                            </a>
+                                            <p class="sp-caption">Page 2: Short description goes here</p>
+                                        </div>
+
+                                        <div class="sp-slide">
+                                            <a href="images/comic-slide/3-large.jpgg">
+                                                <img class="sp-image" src="css/images/blank.gif" data-src="images/comic-slide/3-medium.jpg" data-retina="images/comic-slide/3-large.jpg" />
+                                            </a>
+                                            <p class="sp-caption">Page 3: Short description goes here</p>
+                                        </div>
+
+                                        <div class="sp-slide">
+                                            <a href="images/comic-slide/4-large.jpg">
+                                                <img class="sp-image" src="css/images/blank.gif" data-src="images/comic-slide/4-medium.jpg" data-retina="images/comic-slide/4-large.jpg" />
+                                            </a>
+                                            <p class="sp-caption">Page 4: Short description goes here</p>
+                                        </div>
+
+                                        <div class="sp-slide">
+                                            <a href="images/comic-slide/5-large.jpg">
+                                                <img class="sp-image" src="css/images/blank.gif" data-src="images/comic-slide/5-medium.jpg" data-retina="images/comic-slide/5-large.jpg" />
+                                            </a>
+                                            <p class="sp-caption">Page 5: Short description goes here</p>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+
+
+                            </p>
+
+                        </div>
+                        <div class="testimonial">
+                            <span class="speech-open"></span>
+                            <p><strong>Issue #1 </strong><br/> We are introduced to the characters that are about to be part of our lives for the next coming monthly issues. Follow the journey of the various “young hustla’s” as they pave the way for what is to become the world’s first entrepreneurship comic book. </p>
+                            <span class="speech-close"></span>
+                        </div>
+                        <span class="dash-bottom"></span>
+                        <span class="dash-right"></span>
+                    </section>
+                    <section id="comic-char" class="scroll-section clearfix">
+                        <div class="product-wrap-outer">
+                            <div class="product-wrap clearfix">
+                                <div class="product-box">
+                                    <h3><span>Tshepisang (24 years)</span></h3>
+                                    <p><span>Tshepisang is an architecture student living with his grandmother and younger brother Khumo in Soweto, Protea Glen. After his parents passed away, things went from bad to worse, each month is a constant struggle for survival for them.
+                                    <br/><br/>Character traits: <strong>Intelligent, a big dreamer, sociable, caring and easily distracted.</strong></span></p>
+                                    <img src="images/char-1.png" class="char name" alt="name" />
+                                </div>
+                                <div class="product-box">
+                                    <h3><span>Zoleka (26 years)</span></h3>
+                                    <p><span>Pushed by her mother, she was lead into studying nursing, however always dreamt of having her own fashion line, so she spends most of her free time sewing, tailoring and doing beadwork.
+                                    <br/><br/>Character traits: <strong>artistic, charismatic, creative and kind</strong></span></p>
+                                    <img src="images/char-2.png" class="char name" alt="name" />
+                                </div>
+                                <div class="product-box">
+                                    <h3><span>Khumo(18 years)</span></h3>
+                                    <p><span>Younger brother to Tshepisang, both live with their grandmother in Soweto, Protea Glen.
+                                    <br/><br/>Character traits: <strong>reckless, impulsive, sturborn, go getter, selfish, always looking for shortcuts</strong></span></p>
+                                    <img src="images/char-3.png" class="char name" alt="name" />
+                                </div>
+                                <div class="product-box">
+                                    <h3><span>Simeon (28 years)</span></h3>
+                                    <p><span>Coming from a wealthy family, Simeon enjoyed all privileges of a rich life, which in turn made him spoilt and lazy. His dream is to one day own a film studio.
+                                    <br/><br/>Character traits: <strong>convincing, passionate, proud, strong-willed.</strong></span></p>
+                                    <img src="images/char-4.png" class="char name" alt="name" />
+                                </div>
+                                <div class="product-box">
+                                    
+                                    <p><span><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span></p>
+                                    
+                                </div>
+                                <div class="product-box">
+                                    
+                                    <p><span><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span></p>
+                                    
+                                </div>
+                                <span class="swipe-icon"></span>
+                            </div>
+                        </div>
+                        <span class="dash-bottom"></span>
+                    </section>
+                    <section id="appliance-rework Background" class="scroll-section clearfix">
+                        <h2><span>We are at War</span></h2>
+                        <div class="content-box clearfix">
+                            <p>Ladies and gentleman, we are at war and our enemies are poverty, youth unemployment, corruption, and inequitable income distribution. As things stand we are losing this fight and this is evident from records of high youth unemployment, high levels of poverty, corruption and inequitable income distribution etc.
+                                <br/>
+                                <br/>Every war needs a face, for the freedom of South Africa it was Nelson Mandela, someone that would inspire the people both young and old to fight, someone that the people can identify with, someone who is a symbol of hope when all hope is lost.
+                            </p>
+                            <div class="fact fact-left">
+                                <h4 class="fact-value">36</h4>
+                                <h4>Un<br/>employed youth</h4>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <span class="speech-open"></span>
+                            <p>According to Stats SA Labour market dynamics 2014 report, the working age youth population in South Africa is about 19.5 million of which 6 million is employed and 3.4 million unemployed. <strong>Fact Sheet</strong></p>
+                            <span class="speech-close"></span>
+                        </div>
+                        <span class="dash-bottom"></span>
+                        <span class="dash-left"></span>
+                    </section>
+                </div>
+            </div>
+            <span class="pin-trigger2">
+              <span class="dash-vert"></span>
+            </span>
+            <div id="pin-outer2" class="clearfix">
+                <div id="pin-inner2" class="clearfix">
+                    <section id="product-evaluation" class="scroll-section clearfix">
+                        <h2><span>Things can only get worse</span></h2>
+                        <div class="content-box clearfix">
+                            <p>What if this hero, wasn’t actually human, what if it was a comic book character such as Captain America who inspired the people of America to defend their country during world war two or was like Superman who fought for injustice, who fought for the weak or like Captain Planet who fought to save the planet.
+                                <br/>
+                                <br/>Our leaders are failing us and we need to look elsewhere for inspiration, Tshepisang (is a Sesotho word, when translated in English it means (‘’promise’’), this could be that hero that our youth needs, through entrepreneurship and “Young Hustla” being our choice of weapon we can fi </p>
+                            <div class="fact fact-left">
+                                <h4 class="fact-value">52</h4><span>ratio of workers</span>
+                                <h4>to entrep-<br/>reneurs</h4>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <span class="speech-open"></span>
+                            <p>9 out of 10 young people aged 15-34 years who lived in households with no one employed are Black African. From this population, 58,9% did not complete secondary school and 65% are economically inactive. <strong>Fact Sheet</strong></p>
+                            <span class="speech-close"></span>
+                        </div>
+                        <span class="dash-bottom"></span>
+                        <span class="dash-right"></span>
+                    </section>
+                    <section id="contributions" class="scroll-section clearfix">
+                        <div class="suppliers-wrap-outer">
+                            <h2><span>Contributors</span></h2>
+                            <div class="content-box clearfix">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus ex. Sed facilisis dignissim ipsum, vel rutrum risus lobortis at. Aenean vel nibh quis sapien auctor molestie sed eu lacus
+                                    <br/>
+                                    <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus ex. Sed facilisis dignissim ipsum, vel rutrum risus lobortis at. Aenean vel nibh quis sapien auctor molestie sed eu lacus
+                                    <br/>
+                                    <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus ex. Sed facilisis dignissim ipsum, vel rutrum risus lobortis at. Aenean vel nibh quis sapien auctor molestie sed eu lacus</p>
+                                <div class="fact">
+                                    <h4 class="fact-value">2600</h4>
+                                    <h4>Readers by 2016</h4>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+
+                            </div>
+                        </div>
+                        <div class="logo-wrap">
+                            <div class="logo-wrap-inner">
+                                <span class="grad-left"></span>
+                                <div id="logo-list"></div>
+                                <span class="grad-right"></span>
+                            </div>
+                        </div>
+                        <span class="dash-bottom"></span>
+                    </section>
+                    <section id="background" class="scroll-section clearfix">
+                        <h2><span>Comic background</span></h2>
+                        <div class="content-box clearfix">
+                            <p>
+                                It was created with you the youth of our country and those who are young at heart, in mind. Without you they would be no Young Hustla. Young Hustla is an extension of you, the individual who comes from nothing and makes something of themselves, you the game changers, the misfits, the guys who are not waiting for handouts but are making things happen.<br/><br/>
+As you read a copy we hope that you continue to support the cause by continuously giving us feedback on our social media, by continuously encouraging friends, family, colleagues to buy a copy or copies, remember this is not just a comic book it’s a collector’s  item, a piece of South African history that will be passed down from generation to generation.
+
+                            </p>
+                            <div class="fact">
+                                <h4 class="fact-value">31<span>,</span>202</h4>
+                                <h4>Readers Every Year!</h4>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <span class="speech-open"></span>
+                            <p>Through this we hope to empower both young and old, with the tools to start and grow their existing business that will enrich their communities <strong>Fact Sheet</strong></p>
+                            <span class="speech-close"></span>
+                        </div>
+                        <span class="dash-bottom"></span>
+                        <span class="dash-left"></span>
+                    </section>
+                </div>
+            </div>
+            <section id="contact" class="scroll-section clearfix">
+                <span class="dash-top"></span>
+                <h2><span>A collector’s item, a piece of history</span></h2>
+                <div class="contact-inner clearfix">
+                    <h2><span>Contact Us</span></h2>
+                    <div class='gf_browser_safari gf_browser_iphone gform_wrapper' id='gform_wrapper_1'>
+                        <a id='gf_1' class='gform_anchor'></a>
+                        <form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1' action='/#gf_1'>
+                            <div class='gform_body'>
+                                <ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'>
+                                    <li id='field_1_2' class='gfield gfield_contains_required field_sublabel_below field_description_below'>
+                                        <label class='gfield_label' for='input_1_2'>Name<span class='gfield_required'>*</span></label>
+                                        <div class='ginput_container'>
+                                            <input name='input_2' id='input_1_2' type='text' value='' class='large' tabindex='1' />
+                                        </div>
+                                    </li>
+                                    <li id='field_1_3' class='gfield field_sublabel_below field_description_below'>
+                                        <label class='gfield_label' for='input_1_3'>Company</label>
+                                        <div class='ginput_container'>
+                                            <input name='input_3' id='input_1_3' type='text' value='' class='large' tabindex='2' />
+                                        </div>
+                                    </li>
+                                    <li id='field_1_4' class='gfield gfield_contains_required field_sublabel_below field_description_below'>
+                                        <label class='gfield_label' for='input_1_4'>Email<span class='gfield_required'>*</span></label>
+                                        <div class='ginput_container'>
+                                            <input name='input_4' id='input_1_4' type='email' value='' class='large' tabindex='3' />
+                                        </div>
+                                    </li>
+                                    <li id='field_1_5' class='gfield gfield_contains_required field_sublabel_below field_description_below'>
+                                        <label class='gfield_label' for='input_1_5'>Enquiry<span class='gfield_required'>*</span></label>
+                                        <div class='ginput_container'>
+                                            <textarea name='input_5' id='input_1_5' class='textarea medium' tabindex='4' rows='10' cols='50'></textarea>
+                                        </div>
+                                    </li>
+                                    <li id='field_1_6' class='gfield gform_validation_container field_sublabel_below field_description_below'>
+                                        <label class='gfield_label' for='input_1_6'>Comments</label>
+                                        <div class='ginput_container'>
+                                            <input name='input_6' id='input_1_6' type='text' value='' autocomplete='off' />
+                                        </div>
+                                        <div class='gfield_description'>This field is for validation purposes and should be left unchanged.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='gform_footer top_label'>
+                                <input type='submit' id='gform_submit_button_1' class='gform_button button' value='Submit' tabindex='5' onclick='if(window["gf_submitting_1"]){return false;}  if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  ' />
+                                <input type='hidden' name='gform_ajax' value='form_id=1&amp;title=&amp;description=&amp;tabindex=1' />
+                                <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+                                <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+                                <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+                                <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsIjIxNDZhZmU5OTc5OTg1YjU2YzQ1ZmM1NTg4ZmFkYjgwIl0=' />
+                                <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+                                <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+                                <input type='hidden' name='gform_field_values' value='' />
+                            </div>
+                        </form>
+                    </div>
+                    <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1' id='gform_ajax_frame_1' title='Ajax Frame'></iframe>
+                    <div class="content-box clearfix">
+                        <p>Unit 2
+                            <br /> Wellfield Business Park
+                            <br /> PROTEA GLEN
+                            <br /> SOWETO
+                        </p>
+                        <p><a style="display: block; margin: 15px 0;" href="">enquiries@comic.co.za</a></p>
+                        <p><strong>Tel:</strong> 01772 880200
+                            <br />
+                            <strong>Mob:</strong> 07980 687878
+                            <br />
+                            <strong>Fax:</strong> 05603 445544
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="scroll-bg bg-initial"></div>
+        <div class="scroll-bg bg1"></div>
+        <div class="scroll-bg bg1-fade"></div>
+        <div class="scroll-bg bg2"></div>
+        <div class="scroll-bg bg2-fade"></div>
+        <div class="scroll-bg bg3"></div>
+        <div class="scroll-bg bg3-fade"></div>
+        <footer class="footer" role="contentinfo">
+            <div id="inner-footer" class="wrap clearfix">
+                <p class="source-org copyright">&copy; Young hustler 2015</p>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="js/app2/main.js"></script>
+</body>
+
+</html>
