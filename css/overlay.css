@@ -6558,5 +6558,23 @@ div#loader p{
 }
 
 
+.slider-pro .sp-selected img.sp-image {
+    opacity: 1;
+}
+
+img.sp-image {
+    opacity: 0.3;
+}
+
+.product-box.null p, .product-box.null span {
+    background: white;
+    border: none;
+        border-bottom: none !important;
+}
+
+#container {
+	opacity: 0,
+}
+
 
 
