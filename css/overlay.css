@@ -300,8 +300,7 @@ solid;
 	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	background:#808080;
 	border:none;
-	padding:18px
-36px;
+	padding:18px 36px;
 	color:#000;
 	display:block;
 	text-align:center;
@@ -529,7 +528,7 @@ auto;
 }
 
 a, a:visited {
-	color:#000;
+	color:white;
 	text-decoration:none;
 }
 
@@ -621,12 +620,13 @@ img {
 }
 
 body.home .nav-icon {
-	background:url("../images/nav-icon.png") no-repeat 0 0 scroll;
+	background:url("../images/nav-icon@2x.png") no-repeat 0 0 scroll;
 	width:21px;
 	height:21px;
 	display:block;
 	cursor:pointer;
 	float:right;
+	background-size: 21px;
 }
 
 #navigation {
@@ -2440,7 +2440,7 @@ div.testimonial {
 	left:60%;
 }
 
-}@media only screen and (-webkit-min-device-pixel-ratio: 1.5),  only screen and (min--moz-device-pixel-ratio: 1.5),  only screen and (min-device-pixel-ratio: 1.5) {
+
 	body.home .nav-icon {
 	background:url("../images/nav-icon@2x.png") no-repeat;
 	background-size:21px 21px;
@@ -2454,7 +2454,7 @@ div.testimonial {
 .scroll-section div.testimonial span.speech-close {
 	background:url("../images/speech-close@2x.png") no-repeat;
 	background-size:30px 30px;
-}
+
 
 }@media
 print {
@@ -6569,7 +6569,7 @@ img.sp-image {
 .product-box.null p, .product-box.null span {
     background: white;
     border: none;
-        border-bottom: none !important;
+    border-bottom: none !important;
 }
 
 #container {
